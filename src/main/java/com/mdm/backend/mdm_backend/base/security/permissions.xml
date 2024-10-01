@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+    <authGroup>
+        <name>Админ эрх</name>
+        <groupName>group_administrator</groupName>
+        <description>Auth models</description>
+        <modelName>auth.models</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <users>
+            <userId>1</userId>
+        </users>
+    </authGroup>
+    <authGroup>
+        <name>Хандалт эрхүүд</name>
+        <groupName>group_manager</groupName>
+        <description>Auth models</description>
+        <modelName>auth.models</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <users>
+            <userId>1</userId>
+        </users>
+    </authGroup>
+    <authModel>
+        <name>Auth models</name>
+        <description>Auth models</description>
+        <modelName>auth.models</modelName>
+        <active>true</active>
+        <access>
+            <name>group_administrator</name>
+            <groupId>group_administrator</groupId>
+            <permRead>true</permRead>
+            <permCreate>true</permCreate>
+            <permUpdate>true</permUpdate>
+            <permDelete>true</permDelete>
+        </access>
+    </authModel>
+
+    <authMenu>
+        <name>Тохиргоо</name>
+        <menuName>auth_config_menu</menuName>
+        <description>Configuration menu</description>
+        <modelName>auth.menus</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <groups>
+            <groupId>group_administrator</groupId>
+            <groupId>group_manager</groupId>
+        </groups>
+    </authMenu>
+    <authMenu>
+        <name>Тохиргоо хэрэглэгч</name>
+        <menuName>auth_users_config_menu</menuName>
+        <parentMenuName>auth_config_menu</parentMenuName>
+        <description>Users configuration menu</description>
+        <modelName>auth.users</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <groups>
+            <groupId>group_administrator</groupId>
+            <groupId>group_manager</groupId>
+        </groups>
+    </authMenu>
+    <authMenu>
+        <name>Тохиргоо Цэс/Menu items</name>
+        <menuName>auth_menus_config_menu</menuName>
+        <parentMenuName>auth_config_menu</parentMenuName>
+        <description>Menu configuration</description>
+        <modelName>auth.menus</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <groups>
+            <groupId>group_administrator</groupId>
+            <groupId>group_manager</groupId>
+        </groups>
+    </authMenu>
+    <authMenu>
+        <name>Тохиргоо грүпп</name>
+        <menuName>auth_group_config_menu</menuName>
+        <parentMenuName>auth_config_menu</parentMenuName>
+        <description>Menu configuration</description>
+        <modelName>auth.groups</modelName>
+        <active>true</active>
+        <notDeleteAble>true</notDeleteAble>
+        <groups>
+            <groupId>group_administrator</groupId>
+            <groupId>group_manager</groupId>
+        </groups>
+    </authMenu>
+</models>
